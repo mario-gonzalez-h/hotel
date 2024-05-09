@@ -68,7 +68,7 @@ public class Reservation {
         double totalReservationCost = this.price * this.numberOfNights;
 
         if (this.isWeekend){
-            totalReservationCost * 1.10;
+            totalReservationCost *= 1.10;
         }
 
         return totalReservationCost;
