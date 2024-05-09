@@ -15,6 +15,20 @@ public class Employee {
         this.hoursWorked = 0;
     }
 
+    public double getTotalPay() {
+        return (payRate * getRegularHours()) + (1.5 * payRate * getOvertimeHours());
+    }
+
+    public int getRegularHours() {
+        if (hoursWorked > 40) return 40;
+        return hoursWorked;
+    }
+
+    public int getOvertimeHours() {
+        if (hoursWorked <= 40) return 0;
+        return hoursWorked - 40;
+    }
+
     public void resetHours() {
         hoursWorked = 0;
     }
