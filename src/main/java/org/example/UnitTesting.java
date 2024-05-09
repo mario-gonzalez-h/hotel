@@ -12,8 +12,8 @@ public class UnitTesting {
     public void ifIsOccupiedEqualsFalse_AndIfIsDirtyEqualsFalse_ThenIsAvailable_ReturnTrue(){
         // Arrange
         Room room = new Room();
-        room.setIsOccupied(false);
-        room.setIsDirty(false);
+        room.setOccupied(false);
+        room.setDirty(false);
 
         // Act
         boolean result = room.isAvailable();
@@ -27,8 +27,8 @@ public class UnitTesting {
     public void ifIsOccupiedEqualsTrue_AndIfIsDirtyEqualsTrue_ThenIsAvailable_ReturnFalse(){
         // Arrange
         Room room = new Room();
-        room.setIsOccupied(true);
-        room.setIsDirty(true);
+        room.setOccupied(true);
+        room.setDirty(true);
 
         // Act
         boolean result = room.isAvailable();
@@ -46,7 +46,7 @@ public class UnitTesting {
         Reservation reservation = new Reservation();
         reservation.setRoomType("king");
         reservation.setNumberOfNights(3);
-        reservation.setIsWeekend(true);
+        reservation.setWeekend(true);
 
         // Act
         double result = reservation.getTotal();
@@ -63,7 +63,7 @@ public class UnitTesting {
     public void payRate_TimesGetRegularHours_PlusGetOvertimeHours_EqualsGetTotalPay() {
         // Arrange
         // Ex: 45 hours worked
-        Employee employee = new Employee("123", "Bob", "Service Associate", 20.0, 45);
+        Employee employee = new Employee(123, "Bob", "Service Associate", 20.0, 45);
 
         // Act
         double result = employee.getTotalPay();
@@ -77,7 +77,7 @@ public class UnitTesting {
     public void ifHoursWorkedAbove40_ReturnGetRegularHours() {
         // Arrange
         // Ex: 45 hours worked
-        Employee employee = new Employee("123", "Bob", "Service Associate", 20.0, 45);
+        Employee employee = new Employee(123, "Bob", "Service Associate", 20.0, 45);
 
         // Act
         int hoursWorked = employee.getRegularHours();
@@ -91,7 +91,7 @@ public class UnitTesting {
     public void ifGetRegularHoursGreaterThan40_Substract40_ReturnReminder() {
         // Arrange
         // Ex: 45 hours worked
-        Employee employee = new Employee("123", "Bob", "Service Associate", 20.0, 45);
+        Employee employee = new Employee(123, "Bob", "Service Associate", 20.0, 45);
 
         // Act
         double overtimeHours = employee.getOvertimeHours();
