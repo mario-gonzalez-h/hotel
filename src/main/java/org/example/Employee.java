@@ -1,14 +1,14 @@
 package org.example;
 
 public class Employee {
-    private int emplyoeeId;
+    private int employeeId;
     private String name;
     private String department;
     private double payRate;
     private int hoursWorked;
 
-    public Employee(int emplyoeeId, String name, String department, double payRate) {
-        this.emplyoeeId = emplyoeeId;
+    public Employee(int employeeId, String name, String department, double payRate) {
+        this.employeeId = employeeId;
         this.name = name;
         this.department = department;
         this.payRate = payRate;
@@ -23,8 +23,8 @@ public class Employee {
         hoursWorked += hours;
     }
 
-    public int getEmplyoeeId() {
-        return emplyoeeId;
+    public int getEmployeeId() {
+        return employeeId;
     }
 
     public String getName() {
