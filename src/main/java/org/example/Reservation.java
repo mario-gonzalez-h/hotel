@@ -59,16 +59,16 @@ public class Reservation {
 
     public double getReservationTotal(){
 
-        if (Objects.equals(this.roomType, "Double")){
+        if (Objects.equals(this.roomType, "double")){
             this.price = 124.00;
-        }else if(Objects.equals(this.roomType, "King")){
+        }else if(Objects.equals(this.roomType, "king")){
             this.price = 139.00;
         }
 
         double totalReservationCost = this.price * this.numberOfNights;
 
         if (this.isWeekend){
-            totalReservationCost *= .10;
+            totalReservationCost * 1.10;
         }
 
         return totalReservationCost;
