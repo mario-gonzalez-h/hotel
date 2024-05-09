@@ -45,7 +45,7 @@ public class Room {
         isDirty = dirty;
     }
 
-    public Boolean isAvailable() {
+    public boolean isAvailable() {
         if (this.isDirty == false && this.isOccupied == false) {
             return true;
         }
